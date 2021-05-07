@@ -10,9 +10,9 @@ import javax.persistence.*;
 @Data
 @Table(name = "tasks")
 public class Task {
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String text;
     private String date;
